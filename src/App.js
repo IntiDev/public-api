@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Image } from 'react-bootstrap';
+import {Container, Image, Table } from 'react-bootstrap';
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -28,13 +28,30 @@ function App() {
       <header>
         <Image src={logo} fluid/>
       </header>
-      <section>
-        {
-          dataFilms.length > 0 && dataFilms.map(item => 
-            <p key={item.id}>{item.title} </p>
-          )
-        }
-      </section>
+      <Container fluid>
+        <Table striped size="sm" responsive>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Director</th>
+              <th>Release date</th>
+            </tr>
+          </thead>
+          <tbody>
+          {
+            dataFilms.length > 0 && dataFilms.map(item =>
+              <tr key={item.id}>
+                <td> {item.title} </td>
+                <td> {item.description} </td>
+                <td> {item.director} </td>
+                <td> {item.release_date } </td>
+              </tr>
+            )
+          }
+          </tbody>
+        </Table>
+      </Container>
     </div>
   );
 }
