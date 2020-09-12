@@ -28,8 +28,9 @@ function App() {
       <header>
         <Image src={logo} fluid/>
       </header>
+      <h3 className="mb-2">Did you know all of this information about the Studio Ghibli's films?</h3>
       <Container fluid>
-        <Table striped size="sm" responsive>
+        <Table striped size="sm" responsive >
           <thead>
             <tr>
               <th>Title</th>
