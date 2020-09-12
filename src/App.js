@@ -1,5 +1,7 @@
 import React from 'react';
+import { Image } from 'react-bootstrap';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo}/>
+      <header>
+        <Image src={logo} fluid/>
       </header>
     </div>
   );
